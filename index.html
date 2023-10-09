@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de Senhas, password generator">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="principal">
+        <img src="assets/logo.png" class="logo" alt="Gerador de Senhas logo">
+        <main class="container-input">
+            <span>Tamanho <span id="valor"></span> caracteres</span>
+            <input type="range" id="slider" class="slider" min="4" max="30" value="17">
+
+            <button id="button" class="button-cta" onclick="generatePassword()">Gerar Senha</button>
+        </main>
+        <div id="container-password" class="container-password hide">
+            <span class="title">Sua senha gerada foi: </span>
+            <span id="password" class="password" onclick="copyPassword()"></span>
+            <span class="tooltip">Clique na senha para copiar. 👆🏾</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
